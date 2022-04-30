@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+@import "theme/animations/animate.scss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 8px 0px;
+    box-shadow: rgb(219 219 219 / 25%) 0px 4px 4px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (min-width: 800px) {
+    .container-fluid{
+        padding: 0px 60px 0px 60px;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media only screen and (max-width: 900px) {
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin-right: 15px;
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.btn-houm {
+    outline:none;
+    border: none;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px 20px 30px;
+    background-color: #FF452B;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-houm {
+    border: 1px solid #B0BEC5;
+    padding: 0px 14px;
+    border-radius: 50px;
+    height: 40px;
+    width: 450px;
+    margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-houm::placeholder {
+    color: rgb(176, 190, 197);
+    opacity: 0.7;
+}
+
+.input-houm:focus {
+    border: 1px solid rgb(176 190 197 / 0.7%);
+    color: #607D8B;
+    outline: 0 none;
+    border-radius: 50px;
 }
